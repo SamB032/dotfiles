@@ -1,0 +1,7 @@
+[user]
+	; email = email
+	name = Sam
+[push]
+	autoSetupRemote = true
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
