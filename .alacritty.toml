@@ -1,0 +1,29 @@
+[general]
+import = [
+  "~/.config/alacritty/themes/tokyo-night.toml"
+]
+
+[shell]
+program = "ubuntu"
+
+[env]
+term = "xterm-256color"
+
+[window]
+opacity = 1
+
+padding.x = 0
+padding.y = 0
+
+decorations = "Full"
+decorations_theme_variant = "Dark"
+
+dynamic_padding = true
+
+startup_mode = "Fullscreen"
+
+[font]
+normal.family = "JetBrainsMono NF"
+bold.family = "JetBrainsMono NF"
+italic.family = "JetBrainsMono NF"
+bold_italic.family = "JetBrainsMono NF"
