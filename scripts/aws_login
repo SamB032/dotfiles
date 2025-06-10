@@ -1,0 +1,10 @@
+#!/bin/bash
+set -euo pipefail
+
+profile=$(aws configure list-profiles | fzf --prompt="Select AWS Profile: ")
+
+if [ -n "$profile" ]; then
+  aws sso login --profile "$profile"
+else 
+  echo "No context selected."
+fi

@@ -1,0 +1,13 @@
+#!/bin/bash
+set -euo pipefail
+
+context=$(kubectl config get-contexts --no-headers | \
+  awk '{if ($1 == "*") print "👉 " $2; else print "   " $2}' | \
+  fzf --prompt="Select Kubernetes Context: " | sed 's/^[^a-zA-Z0-9_-]*//'
+)
+
+if [ -n "$context" ]; then
+  kubectl config use-context "$context"
+else 
+  echo "No context selected."
+fi
