@@ -3,9 +3,6 @@ import = [
   "~/.config/alacritty/themes/tokyo-night.toml"
 ]
 
-[shell]
-program = "ubuntu"
-
 [env]
 term = "xterm-256color"
 
