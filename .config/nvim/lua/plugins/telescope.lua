@@ -7,7 +7,11 @@ return {
       local builtin = require('telescope.builtin')
       local wk = require('which-key')
       wk.add({
-        { "<leader>ff", builtin.find_files, desc = "Find File" },
+        { "<leader>ff", function()
+            builtin.find_files({
+              no_ignore = true,
+          })
+          end, desc = "Find File (show gitignored + hidden)" },
         { "<leader>fb", builtin.buffers, desc = "Find Buffer" },
         { "<leader>fg", builtin.live_grep, desc = "Find with Grep" },
         { "<leader>fh", builtin.help_tags, desc = "Find Help" },

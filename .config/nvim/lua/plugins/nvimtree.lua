@@ -9,7 +9,14 @@ return {
       require("nvim-tree").setup({
         renderer = {
           root_folder_label = false
-        }
+        },
+        filters = {
+          dotfiles = false,
+        },
+        git = {
+          enable = true,
+          ignore = false,
+        },
       })
     end,
 }
