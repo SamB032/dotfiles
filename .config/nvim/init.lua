@@ -99,7 +99,7 @@ local is_windows = vim.loop.os_uname().sysname == "Windows_NT"
 vim.env.PATH = vim.fn.stdpath("data") .. "/mason/bin" .. (is_windows and ";" or ":") .. vim.env.PATH
 
 -- Enable LSP
-vim.lsp.enable({'gopls', 'ruff', 'lua-ls', 'terraform-ls', 'helm-ls', 'yaml-ls', 'rust-analyzer'})
+vim.lsp.enable({'go-ls', 'python-ls', 'lua-ls', 'terraform-ls', 'helm-ls', 'yaml-ls', 'typescript-ls', 'haskell-ls'})
 
 vim.diagnostic.config({ virtual_text = true })
 

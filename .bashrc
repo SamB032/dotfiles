@@ -22,7 +22,7 @@ alias l='ls -CF'
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/scripts:$HOME/go/bin:$PATH"
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -71,8 +71,21 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - bash)"
 
-# Go Binaries (Mockery and gopls)
-export PATH=$PATH:$HOME/go/bin
-
 # Brew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# WSL Perf
+alias PERF='/usr/lib/linux-tools/6.8.0-64-generic/perf'
+
+# Rust binary
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+[ -f "/home/boffeysa/.ghcup/env" ] && . "/home/boffeysa/.ghcup/env" # ghcup-env
