@@ -60,6 +60,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Brew
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
 # Oh-my-posh
 eval "$(oh-my-posh init bash --config ~/.config/oh-my-posh/zen.toml)"
 
@@ -70,19 +73,6 @@ eval "$(zoxide init bash --cmd cd)"
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - bash)"
-
-# Brew
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
-# WSL Perf
-alias PERF='/usr/lib/linux-tools/6.8.0-64-generic/perf'
-
-# Rust binary
-export PATH="$HOME/.cargo/bin:$PATH"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
