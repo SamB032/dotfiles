@@ -1,11 +1,29 @@
 [user]
 	email = test@email.com
 	name = Sam
+
+[core]
+  pager = delta
+
 [push]
 	autoSetupRemote = true
+
 [pull]
 	rebase = true
+
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
+
 [core]
 	autocrlf = input
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true
+    side-by-side = true
+    line-numbers = true
+
+[merge]
+    conflictstyle = zdiff3
