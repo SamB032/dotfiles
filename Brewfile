@@ -1,0 +1,7 @@
+brew "fzf"
+brew "jq"
+brew "neovim"
+brew "ripgrep"
+brew "shfmt"
+brew "tmux"
+brew "tree"
